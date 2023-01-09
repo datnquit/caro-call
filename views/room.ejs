@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <title>Room</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <link rel="stylesheet" href="css/style.css">
+	
+    <script src="js/d3.v5.min.js"></script>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      body{
+          background-color: #79CDCD;
+      }
+    </style>
+  </head>
+  <body>
+	<!--Menu-->
+	<div id="colorlib-page">
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+          <li><a style="color: white;" id="idRoom">ID <br></a> </li>
+					<li><a >Online</a>
+						<ul id="addVideo">
+              <video id="localStream" width="300"></video>
+              <br><br>
+              <video id="remoteStream" width="300"></video>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+      <button id="checkReady" onclick="clickCheckReady()" data-type="1" class="btn btn-outline-light"><strong>&emsp; Ready &emsp;</strong></button>
+      <button id="refresh" onclick="clickRefresh()" data-type="1" class="btn btn-outline-light"><strong>&emsp; Play again &emsp;</strong></button>
+    </aside>
+
+    
+		<!--Content-->
+		<div id="colorlib-main">
+					<div id="content" align="center">
+					</div>
+		</div>
+	</div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="/room/js/peer-demo.min.js"></script>
+
+  <!-- <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script> -->
+  <script src="https://caro-call.herokuapp.com/socket.io/socket.io.js"></script>
+  <!-- <script src="/socket.io/socket.io.js"></script> -->
+  <script src="room.js"></script>
+  </body>
+</html>
